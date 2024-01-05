@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { ConvertdigittotextPipe } from './convertdigittotext.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConvertdigittotextPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ConvertdigittotextPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
